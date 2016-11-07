@@ -15,16 +15,20 @@
 </head>
 <body>
 
+<input type="text" name="replace array" value="array"><br><br>
+  <input type="submit" value="Submit">
 
 <?php  include "sort.php";   ?>
 
 
-<h2>Bubble sort </h2>
-<p> It is one algorithm used to sot a sequence of number. The scales at the right end of the sequence will compare the numbers on their left and right sides. If the number on the right is found to be smaller,the numners will be swapped. </br>
-
  <?php
+
+$a1=array(20,17,12,1,2,3);
+$a2=array(25,1,22,8,45,5);
+
+
 // Example:
-$arr = array(25,1,22,8,45,5);
+$arr = array_replace($a1,$a2);
 echo("our array ");
 //print_r($arr);
   echo'<ul class="pagination">';
@@ -36,14 +40,14 @@ foreach ($arr as $key => $value) {
     echo'  <li>'. $value . '</li>' ;
 }
   echo'</ul><br/>';
+?>
 
 
 
+<h2>Bubble sort ascending  array</h2>
 
-
-
+<?php
 $result = bubbleSort1($arr);
-echo("our bubbleSort ascending  array ");
 echo'<ul class="pagination">';
 foreach ($result as $key => $value) {
     echo'<li>'.  $key  . '</li>' ;
@@ -53,9 +57,9 @@ foreach ($result as $key => $value) {
     echo'  <li>'. $value . '</li>' ;
 }
   echo'</ul><br/>';
-?></p>
-<p>  buuble sort descending </p>
+?>
 
+<h2>Bubble sort ascending  array</h2>
 <?php 
 $sortedArr = bubbleSortDesc($arr);
   echo'<ul class="pagination">';
@@ -68,13 +72,13 @@ foreach ($sortedArr as $key => $value) {
 }
   echo'</ul><br/>';
 ?>
-</p>
 
+
+<h2>Selection sort ascending  array</h2>
 
 <?php
 // Example:
 $selectionArray = selectionSort($arr);
-echo "selection sort ";
   echo'<ul class="pagination">';
 foreach ($selectionArray as $key => $value) {
     echo'<li>'.  $key  . '</li>' ;
@@ -89,10 +93,11 @@ foreach ($selectionArray as $key => $value) {
 
 ?>
 
+<h2>Shellsort sort sort ascending  array</h2>
+
 <?php
 // Example:
 $shellArray = shellsort($arr);
-echo "shellsort sort ";
 //print_r($shellArray);
 
   echo'<ul class="pagination">';
@@ -107,6 +112,7 @@ foreach ($shellArray as $key => $value) {
 
 ?>
 
+<h2>New array</h2>
 
 <?php
 
@@ -120,16 +126,20 @@ foreach ($array1 as $key => $value) {
     echo'  <li>'. $value . '</li>' ;
 }
   echo'</ul><br/>';
+?>
 
-
-echo "Standard sorting\n";
+<h2>Standard sorting</h2>
+<?php
 asort($array1);
 foreach ($array1 as $key => $value) {
     echo 'position '.  $key . ' contains  value ' . $value . '<br/>';
 }
 
+?>
 
-echo "\nNatural order sorting\n";
+<h2>Natural order sorting</h2>
+
+<?php 
 natsort($array1);
 foreach ($array1 as $key => $value) {
     echo 'position '.  $key . ' contains  value ' . $value . '<br/>';
