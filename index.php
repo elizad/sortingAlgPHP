@@ -15,11 +15,12 @@
 </head>
 <body>
 
-<input type="text" name="replace array" value="array"><br><br>
+<input type="text" name="replace array" value=" new array replace"><br><br>
   <input type="submit" value="Submit">
 
 <?php  include "sort.php";   ?>
 
+<h2>our array </h2>
 
  <?php
 
@@ -29,7 +30,6 @@ $a2=array(25,1,22,8,45,5);
 
 // Example:
 $arr = array_replace($a1,$a2);
-echo("our array ");
 //print_r($arr);
   echo'<ul class="pagination">';
 foreach ($arr as $key => $value) {
